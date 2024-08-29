@@ -7,7 +7,7 @@
     echo "<b>-- Todos os registros</b>";
     echo "<br>";
     echo "<br>";
-    if (mysqli_num_rows($resultado) > 0){
+    if (mysqli_num_rows($resultado) > 0){ //caso exista algum registro (numero de linhas existentes)
         while($registro = mysqli_fetch_assoc($resultado)){
             echo "Id: " .  $registro["id"]. " - Nome: " . $registro["nome"].
             " " . $registro["senha"]. " - Email: " . $registro["email"]. "<br>";
@@ -54,8 +54,8 @@
     echo "<br>";
     if (mysqli_num_rows($resultado) > 0){
         while($registro = mysqli_fetch_assoc($resultado)){
-            echo " - Nome: " . $registro["nome"].
-            " " . $registro["senha"]. " - Email: " . $registro["email"]. "<br>";
+             echo " - Nome: " . $registro["nome"].
+            " " . $registro["senha"]. " - Email: " . $registro["email"]. "</p>";
         }
     } else {
         echo "Nenhum registro encontrado.";
